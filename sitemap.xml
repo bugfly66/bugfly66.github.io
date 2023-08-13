@@ -2,10 +2,13 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   <url>
+    <loc>http://bugfly66.github.io/test/</loc>
+    <lastmod>2019-04-19T21:37:58+05:30</lastmod>
+  </url><url>
     <loc>http://bugfly66.github.io/categories/</loc>
   </url><url>
-    <loc>http://bugfly66.github.io/</loc>
-  </url><url>
     <loc>http://bugfly66.github.io/tags/</loc>
+  </url><url>
+    <loc>http://bugfly66.github.io/</loc>
   </url>
 </urlset>
