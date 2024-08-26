@@ -1,6 +1,6 @@
-baseURL = 'https://example.org/'
+baseURL = 'https://blog.delicacy.top/'
 languageCode = 'en-us'
-title = 'My New Hugo Site'
+title = ''
 theme = 'hugo-bearblog'
 [markup]
   [markup.goldmark]
