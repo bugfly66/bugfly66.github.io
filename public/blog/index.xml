@@ -1,27 +1,20 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>Hugo ʕ•ᴥ•ʔ Bear Blog</title>
-    <link>http://localhost:1313/</link>
-    <description>Recent content on Hugo ʕ•ᴥ•ʔ Bear Blog</description>
+    <title>Blogs on Hugo ʕ•ᴥ•ʔ Bear Blog</title>
+    <link>http://localhost:1313/blog/</link>
+    <description>Recent content in Blogs on Hugo ʕ•ᴥ•ʔ Bear Blog</description>
     <generator>Hugo</generator>
     <language>en-US</language>
     <copyright>Copyright © 2020, Jane Doe.</copyright>
     <lastBuildDate>Tue, 27 Aug 2024 14:58:07 +0800</lastBuildDate>
-    <atom:link href="http://localhost:1313/index.xml" rel="self" type="application/rss+xml" />
+    <atom:link href="http://localhost:1313/blog/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Test 2</title>
       <link>http://localhost:1313/test-2/</link>
       <pubDate>Tue, 27 Aug 2024 14:58:07 +0800</pubDate>
       <guid>http://localhost:1313/test-2/</guid>
       <description>This is a page about »Test 2«.</description>
-    </item>
-    <item>
-      <title>Test</title>
-      <link>http://localhost:1313/test/</link>
-      <pubDate>Tue, 27 Aug 2024 00:34:42 +0800</pubDate>
-      <guid>http://localhost:1313/test/</guid>
-      <description>TEST PAGE </description>
     </item>
   </channel>
 </rss>
