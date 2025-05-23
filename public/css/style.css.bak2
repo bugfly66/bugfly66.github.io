@@ -1,0 +1,133 @@
+/* 基础设置 */
+body {
+  max-width: 800px;
+  margin: auto;
+  padding: 1em;
+  line-height: 1.6;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+  background-color: #fdf6e3;  /* 浅米黄背景 */
+  color: #000;            /* 咖啡色文字 */
+}
+
+/* 导航菜单 */
+.menu {
+  padding: 0;
+  display: flex;
+  justify-content: center;
+  gap: 1.5rem;
+  margin: 2rem 0;
+}
+
+.menu a {
+  text-decoration: none;
+  color: #8c6b4d;            /* 深米黄色 */
+  padding: 0.5rem 1rem;
+  border-radius: 4px;
+  transition: all 0.2s ease;
+  border: 1px solid #e3d5b8; /* 浅米黄边框 */
+}
+
+.menu a:hover {
+  background-color: #e3d5b8;  /* 浅米黄悬停背景 */
+  color: #6b4f2f;            /* 深咖啡色 */
+}
+
+/* 文章元信息 */
+.article-meta {
+  color: #a1886f;            /* 中米黄色 */
+  margin: 1.5rem 0;
+}
+
+/* 页脚 */
+footer {
+  margin-top: 3rem;
+  padding: 1.5rem 0;
+  color: #a1886f;
+ /* border-top: 1px solid #e3d5b8;*/
+}
+.menu, .article-meta, footer { text-align: center; }
+/* 标题 */
+h1, h2, h3, h4, h5, h6 {
+  color: #6b4f2f;            /* 深咖啡色 */
+  margin: 1.8rem 0 1rem;
+}
+
+/* 分隔线 */
+hr {
+  border: 0;
+  border-top: 2px dashed #e3d5b8;
+  margin: 2.5rem 0;
+}
+
+/* 代码块 */
+pre {
+  background-color: #f4efe6;  /* 浅米黄背景 */
+  border-radius: 6px;
+  padding: 1.25rem;
+  border: 1px solid #e3d5b8;
+  box-shadow: 3px 3px 8px rgba(140,107,77,0.1);
+}
+
+code {
+  /*background-color: rgba(140,107,77,0.1);*/ /* 浅米黄透明背景 */
+/*  color: #6b4f2f;  */          /* 咖啡色代码 */
+}
+
+/* 引用块 */
+blockquote {
+  border-left: 4px solid #c2a782;  /* 中米黄色 */
+  background-color: rgba(226,213,184,0.2);
+  color: #7a624a;           /* 深米黄色 */
+  padding: 1rem 1.5rem;
+}
+/* 表格样式 (基于原始代码调整) */
+table {
+  margin: auto;
+  border-top: 1px solid #c2a782;    /* 米棕顶部线 */
+  border-bottom: 1px solid #c2a782; /* 米棕底部线 */
+  background: #fffcf7;              /* 暖白背景 */
+}
+
+thead th { 
+  border-bottom: 1px solid #e3d5b8; /* 浅米分隔线 */
+  color: #6b4f2f;                  /* 咖啡色文字 */
+}
+
+th, td {
+  padding: 8px 12px;               /* 适度增加内边距 */
+  border-left: 1px solid transparent; /* 隐藏默认边框 */
+  border-right: 1px solid transparent;
+}
+
+th {
+  background: #f7f3eb;             /* 浅米背景 */
+}
+
+/* 斑马纹使用半透明米色 */
+tr:nth-child(even) {
+  background: rgba(243, 234, 219, 0.3); 
+}
+
+/* 移除原始阴影和多余边框 */
+tfoot, thead {
+  background: none !important; 
+}
+
+/* 保留原始移动端适配 */
+@media (max-width: 640px) {
+  th, td {
+    padding: 6px;
+  }
+}
+/* 响应式设计 */
+@media (max-width: 640px) {
+  .menu {
+    flex-wrap: wrap;
+    gap: 0.8rem;
+  }
+  
+  pre {
+    margin-left: -1rem;
+    margin-right: -1rem;
+  }
+}
