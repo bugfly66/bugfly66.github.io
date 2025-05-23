@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Example on A minimal Hugo website</title>
+    <link>http://localhost:1313/categories/example/</link>
+    <description>Recent content in Example on A minimal Hugo website</description>
+    <generator>Hugo</generator>
+    <language>en-us</language>
+    <lastBuildDate>Fri, 23 May 2025 00:00:00 +0000</lastBuildDate>
+    <atom:link href="http://localhost:1313/categories/example/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Markdown Cheatsheet</title>
+      <link>http://localhost:1313/posts/2025/05/23/markdown-cheatsheet/</link>
+      <pubDate>Fri, 23 May 2025 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/posts/2025/05/23/markdown-cheatsheet/</guid>
+      <description>&lt;h1 id=&#34;-the-only-markdown-cheatsheet-you-need&#34;&gt;⬇️ The Only Markdown Cheatsheet You Need&lt;/h1&gt;&#xA;&lt;p&gt;&lt;em&gt;Here you can find &amp;amp; download PDF version of the Complete Markdown Cheatsheet.&lt;br&gt;&#xA;Feel free to download and use it. ✌🏼&lt;/em&gt;&lt;/p&gt;&#xA;&lt;p&gt;✍🏼 I&amp;rsquo;ve also written, in more detail, some articles about Markdown in general.&lt;/p&gt;&#xA;&lt;p&gt;&lt;a href=&#34;https://dev.to/imluka/the-only-markdown-cheatsheet-you-will-ever-need-ccg&#34;&gt;&lt;img src=&#34;https://img.shields.io/badge/dev.to-0A0A0A?style=for-the-badge&amp;logo=dev.to&amp;logoColor=white&#34; /&gt;&lt;/a&gt;&#xA;&lt;a href=&#34;https://medium.com/@im-luka/the-only-markdown-cheatsheet-you-will-ever-need-a2941d008497&#34;&gt;&lt;img src=&#34;https://img.shields.io/badge/Medium-12100E?style=for-the-badge&amp;logo=medium&amp;logoColor=white&#34; /&gt;&lt;/a&gt;&#xA;&lt;a href=&#34;https://imluka.hashnode.dev/the-only-markdown-cheatsheet-you-will-ever-need&#34;&gt;&lt;img src=&#34;https://img.shields.io/badge/Hashnode-2962FF?style=for-the-badge&amp;logo=hashnode&amp;logoColor=white&#34; /&gt;&lt;/a&gt;&lt;/p&gt;&#xA;&lt;hr&gt;&#xA;&lt;h4 id=&#34;-note&#34;&gt;⚠️ Note&lt;/h4&gt;&#xA;&lt;p&gt;GitHub specific Markdown doesn&amp;rsquo;t support some of the features listed in PDF. Perhaps in the future, they might include it.&lt;/p&gt;&#xA;&lt;p&gt;👇🏼 If you are interested in GitHub specific Markdown, follow docs below.&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>Test</title>
+      <link>http://localhost:1313/posts/2015/07/23/test/</link>
+      <pubDate>Thu, 23 Jul 2015 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/posts/2015/07/23/test/</guid>
+      <description></description>
+    </item>
+  </channel>
+</rss>

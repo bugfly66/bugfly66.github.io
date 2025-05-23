@@ -1,0 +1,9 @@
+/* 修改整个页面背景 */
+body {
+  background-color: #F7EED6;
+}
+
+/* 修改特定区域（如文章容器） */
+.article-content {
+  background-color: white;
+}
