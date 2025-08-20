@@ -201,7 +201,7 @@ You can cerate both inline and full block code snippets. You can also define pro
 I created `.env` file at the root.
 Backticks inside backticks? `` `No problem.` ``
 
-```
+```json
 {
   learning: "Markdown",
   showing: "block code snippet"

@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en-us">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Docker proxy | Bugfly66&#39;s Blog</title>
+    <link rel="stylesheet" href="/css/style.css" />
+    <link rel="stylesheet" href="/css/fonts.css" />
+    
+
+  </head>
+
+  <body>
+    <nav>
+    <ul class="menu">
+      
+      <li><a href="/">Home</a></li>
+      
+      <li><a href="/about/">About</a></li>
+      
+      <li><a href="/categories/">Categories</a></li>
+      
+      <li><a href="/tags/">Tags</a></li>
+      
+      <li><a href="/index.xml">Subscribe</a></li>
+      
+    </ul>
+    <hr/>
+    </nav>
+
+<div class="article-meta">
+<h1><span class="title">Docker proxy</span></h1>
+
+<h2 class="date">2025/08/20</h2>
+</div>
+
+<main>
+<blockquote>
+<p>内容来自ChatGPT</p></blockquote>
+<p>好 👍 如果要让 <strong>Docker 全局走代理</strong>，要给 <strong>Docker Daemon 配置代理</strong>。一般分两步：</p>
+<hr>
+<h2 id="-1-创建代理配置文件">🔧 1. 创建代理配置文件</h2>
+<p>首先新建目录（如果不存在）：</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>sudo mkdir -p /etc/systemd/system/docker.service.d
+</span></span></code></pre></div><p>然后创建配置文件：</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>sudo nano /etc/systemd/system/docker.service.d/http-proxy.conf
+</span></span></code></pre></div><p>写入内容（假设代理是 <code>127.0.0.1:7890</code>，改成你自己的）：</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-ini" data-lang="ini"><span style="display:flex;"><span><span style="color:#66d9ef">[Service]</span>
+</span></span><span style="display:flex;"><span><span style="color:#a6e22e">Environment</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;HTTP_PROXY=http://127.0.0.1:7890&#34;</span>
+</span></span><span style="display:flex;"><span><span style="color:#a6e22e">Environment</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;HTTPS_PROXY=http://127.0.0.1:7890&#34;</span>
+</span></span><span style="display:flex;"><span><span style="color:#a6e22e">Environment</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;NO_PROXY=localhost,127.0.0.1,docker-registry.somecorporation.com&#34;</span>
+</span></span></code></pre></div><hr>
+<h2 id="-2-让配置生效">🔧 2. 让配置生效</h2>
+<p>保存后执行：</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>sudo systemctl daemon-reexec
+</span></span><span style="display:flex;"><span>sudo systemctl daemon-reload
+</span></span><span style="display:flex;"><span>sudo systemctl restart docker
+</span></span></code></pre></div><hr>
+<h2 id="-3-验证">🔧 3. 验证</h2>
+<p>执行：</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>systemctl show --property<span style="color:#f92672">=</span>Environment docker
+</span></span></code></pre></div><p>如果能看到刚才设置的 <code>HTTP_PROXY</code> 和 <code>HTTPS_PROXY</code>，说明生效了。</p>
+<hr>
+<h2 id="-4-注意事项">🔧 4. 注意事项</h2>
+<ul>
+<li>
+<p>如果你用的是 <strong>Clash / V2Ray / Surge 等客户端</strong>，本地代理通常是 <code>127.0.0.1:7890</code>（http），如果是 socks5，需要写成：</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-ini" data-lang="ini"><span style="display:flex;"><span><span style="color:#a6e22e">Environment</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;HTTP_PROXY=socks5://127.0.0.1:7890&#34;</span>
+</span></span></code></pre></div></li>
+<li>
+<p><code>NO_PROXY</code> 很重要，否则连 <code>localhost</code> 也会走代理，可能导致容器访问宿主机时出问题。</p>
+</li>
+</ul>
+
+</main>
+
+  <footer>
+  <link rel="stylesheet" href="//cdn.jsdelivr.net/npm/katex/dist/katex.min.css">
+<script src="//cdn.jsdelivr.net/npm/@xiee/utils/js/math-code.min.js" defer></script>
+<script src="//cdn.jsdelivr.net/npm/katex/dist/katex.min.js" defer></script>
+<script src="//cdn.jsdelivr.net/npm/katex/dist/contrib/auto-render.min.js" defer></script>
+<script src="//cdn.jsdelivr.net/npm/@xiee/utils/js/render-katex.js" defer></script>
+
+<script src="//cdn.jsdelivr.net/npm/@xiee/utils/js/center-img.min.js" defer></script>
+
+  
+  <hr/>
+  © <a href="https://blog.delicacy.top">bugfly66</a> 2025 &ndash; 2025 | <a href="https://github.com/bugfly66">Github</a> | <a href="mailto:bugfly66">Email</a>
+  
+  </footer>
+  </body>
+</html>
+
