@@ -1,8 +1,10 @@
 +++
 title = "Point Clouds Registration"
 date = 2025-06-02
+draft = true
 categories = ["Point Cloud Registration"]
 tags = ["Point Cloud Registration"]
+
 +++
 ## 点云配准基础与应用
 - 点云的概念：三维点云是空间中的一组数据点，主要包括刚性点云和非刚性点云，是表达物体或场景几何信息的重要数据形式，广泛应用于计算机视觉、机器人导航、自动驾驶、增强现实等领域。
@@ -23,7 +25,8 @@ tags = ["Point Cloud Registration"]
 	- 3）寻找源点云与目标点云之间的最佳变换； 
 	- 4）得到最终的变换矩阵。
 	其中对应关系的求解与变换矩阵的求解在点云配准中尤为关键
-![[Pasted image 20250604161525.png]]
-==RPMNet流程==
---
+	![[Pasted image 20250604161525.png]]
+	==RPMNet流程==
+	--
+
 ## 挑战与未来发展趋势
